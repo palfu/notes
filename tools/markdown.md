@@ -43,6 +43,7 @@ $$
 |$\Downarrow$|\Downarrow|$\leftarrow$|\leftarrow|
 |$\Leftarrow$|\Leftarrow|$\rightarrow$|\rightarrow|
 |$\Rightarrow$|\Rightarrow|
+|$\frac{a}{b}$|\frac|
 
 
 # 制图
