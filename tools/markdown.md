@@ -19,6 +19,77 @@ $$
 \Lambda \mu \partial \lbrace \rbrace
 ```
 
+# 矩阵
+$$
+\begin{matrix}
+1 & 2& 3\\
+1 & 2& 3\\
+1 & 2& 3\\
+\end{matrix}\tag{1}
+$$
+
+$$
+\begin{vmatrix}
+1 & 2& 3\\
+1 & 2& 3\\
+1 & 2& 3\\
+\end{vmatrix}
+\tag{1}
+$$
+$$
+\begin{Vmatrix}
+1 & 2& 3\\
+1 & 2& 3\\
+1 & 2& 3\\
+\end{Vmatrix}
+\tag{1}
+$$
+
+
+$$
+\begin{bmatrix}
+1 & 2& 3\\
+1 & 2& 3\\
+1 & 2& 3\\
+\end{bmatrix}
+\tag{1}
+$$
+
+$$
+\begin{Bmatrix}
+1 & 2& 3\\
+1 & 2& 3\\
+1 & 2& 3\\
+\end{Bmatrix}\tag{1}
+$$
+
+
+$$
+\begin{Bmatrix}
+1 & 2&\cdots& 3\\
+1 & 2&\cdots& 3\\
+\vdots &\vdots &\ddots& 3\\
+1 & 2&\cdots& 3\\
+\end{Bmatrix}\tag{1}
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & 2& 3\\
+1 & 2& 3
+\end{array}
+\right]
+$$
+
+$$
+P(x|a_x)=\begin{cases}
+1, & x=f(a_x) \\
+0, & other\ values
+\end{cases}
+$$
+
+
 # 数学公式
 |符号|实现|符号|实现|
 |----|----|----|----|
