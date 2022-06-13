@@ -1,4 +1,4 @@
-## thead
+## thread
 ```
 std::set<int> int_set;
 auto f = [&int_set]() {
