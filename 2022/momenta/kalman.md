@@ -23,16 +23,22 @@ $$z_k=Hx_k+\delta z$$
 对系统状态按照如下约定命名
 |标记|含义|对应的状态方差}
 |----|----|----|
-|$\widetilde{x}$|状态的最优估计|$\widetilde{P}$|
-|$x'$|状态先验估计|$P'$|
+|$x^u$|状态的最优估计|$P^u$|
+|$x^p$|状态先验估计|$P^p$|
 |$x$|状态真值|$P$|
 
 kalman系数用于调节系统状态，使系统状态的方差最小，即如下 
-$$\widetilde{x}_{k+1}=x'_{k+1}+K(z-Hx'_{k+1})=x'_{k+1}+K(Hx+\delta z-Hx'_{k+1})\cdots(1)$$
-$$\widetilde{x}_{k+1}-x=
-x'_{k+1}-x+K(Hx+\delta z-Hx'_{k+1})\\
-=(I-KH)(x'_{k+1}-x)+K\delta z\cdots(2)$$
+$$x^u_{k+1}=x^p_{k+1}+K(z-z^p)=x^p_{k+1}+K(Hx+\delta z-Hx^p_{k+1})\cdots(1)$$
+$$x^u_{k+1}-x=
+x^p_{k+1}-x+K(Hx+\delta z-Hx^p_{k+1})\\
+=(I-KH)(x^p_{k+1}-x)+K\delta z\cdots(2)$$
 
-$$P=(I-KH)*P'(I-KH)^T+KRK^T\cdots(3)$$
-$$\frac{\partial P}{\partial K}=-2P'H^T+2K(HP'H^T+R)=0\cdots(4)$$
-$$K=P'H^T(HP'H^T+R)^{-1}\cdots(5)$$
+$$P^u=(I-KH)*P^p(I-KH)^T+KRK^T\cdots(3)$$
+$$\frac{\partial P^u}{\partial K}=-2P^pH^T+2K(HP^pH^T+R)=0\cdots(4)$$
+$$K=P^pH^T(HP^pH^T+R)^{-1}\cdots(5)$$
+
+$$P^u=(I-KH)*P^p(I-KH)^T+KRK^T \\
+=(I-KH)*P^p-(I-KH)*P^pH^TK^T+KRK^T \\
+=(I-KH)*P^p+(K(HP^pH^T+R)-P^pH^T)K^T\\
+=(I-KH)*P^p \cdots(6)
+$$
